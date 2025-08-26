@@ -1,0 +1,57 @@
+{
+  "name": "@dashxboard/pg-js-sdk",
+  "version": "0.1.0",
+  "description": "A comprehensive TypeScript SDK for interacting with Soroban smart contracts that power governance and voting mechanisms in Play Governance, an integral module of the Dashxboard micro-ecosystem within the Stronghold (SHx) ecosystem",
+  "author": "Dashxboard",
+  "homepage": "https://github.com/dashxboard/pg-js-sdk#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dashxboard/pg-js-sdk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dashxboard/pg-js-sdk/issues"
+  },
+  "license": "MIT",
+  "keywords": [
+    "dashxboard",
+    "governance",
+    "stellar-network",
+    "stronghold-pay",
+    "soroban",
+    "smart-contracts",
+    "blockchain"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "dev": "tsc --watch",
+    "prepublishOnly": "pnpm run clean && pnpm run build",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@stellar/stellar-sdk": "14.1.0",
+    "buffer": "^6.0.3"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.2"
+  },
+  "packageManager": "pnpm@10.15.0"
+}

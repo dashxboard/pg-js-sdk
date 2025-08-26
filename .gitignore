@@ -1,0 +1,15 @@
+# Dependencies
+node_modules/
+
+# Build output
+/dist
+
+# Logs
+*.log
+pnpm-debug.log*
+
+# OS-specific files
+.DS_Store
+
+# IDE configuration
+.vscode/
